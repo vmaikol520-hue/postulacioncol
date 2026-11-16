@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Empleo y Selección - Oportunidades Laborales</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #e1e8ed;
+        }
+
+        header h2 {
+            color: #0b2545;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            max-width: 550px;
+            width: 100%;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border-top: 5px solid #134074;
+        }
+
+        .badge {
+            background-color: #eef4f8;
+            color: #134074;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #0b2545;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #6c757d;
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn-postular {
+            display: inline-block;
+            background-color: #28a745;
+            color: #ffffff;
+            padding: 16px 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+            width: 100%;
+            max-width: 380px;
+        }
+
+        .btn-postular:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.8rem;
+            color: #8c98a4;
+            border-top: 1px solid #e1e8ed;
+        }
+
+        footer p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Portal de Selección de Personal</h2>
+    </header>
+
+    <main>
+        <div class="card">
+            <div class="badge">Convocatoria Abierta</div>
+            <h1>Proceso de Selección Activo</h1>
+            <p>Estamos en la búsqueda de personal calificado para nuestras nuevas vacantes disponibles. Sigue los pasos indicados a continuación para completar tu proceso.</p>
+            
+            <div class="btn-container">
+                <a href="https://postulacioncolombinasas.netlify.app/" class="btn-postular" target="_blank" rel="noopener noreferrer">Paso 1: Postularme Ahora</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Portal de Empleos. Todos los derechos reservados. | <a href="#" style="color: #8c98a4; text-decoration: underline;">Política de Privacidad</a></p>
+    </footer>
+
+</body>
+</html>
