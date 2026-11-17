@@ -3,141 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Empleo y Selección - Oportunidades Laborales</title>
+    <title>Gestión de Talento | Registro de Candidatos</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
         }
 
         body {
-            background-color: #f4f7f6;
-            color: #333;
+            background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+            color: #1e293b;
             line-height: 1.6;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
-        header {
+        .top-bar {
             background-color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #e1e8ed;
+            padding: 18px 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
         }
 
-        header h2 {
-            color: #0b2545;
-            font-size: 1.2rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+        .brand-title {
+            color: #312e81;
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        main {
+        .brand-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #4f46e5;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .wrapper {
             flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 24px;
         }
 
-        .card {
+        .application-box {
             background: #ffffff;
-            max-width: 550px;
+            max-width: 520px;
             width: 100%;
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            border-top: 5px solid #134074;
-        }
-
-        .badge {
-            background-color: #eef4f8;
-            color: #134074;
-            padding: 6px 14px;
+            padding: 44px 36px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            box-shadow: 0 12px 32px rgba(49, 46, 129, 0.08);
+            text-align: left;
+            border: 1px solid #e2e8f0;
+        }
+
+        .status-pill {
+            background-color: #ecfdf5;
+            color: #047857;
+            border: 1px solid #a7f3d0;
+            padding: 5px 14px;
+            border-radius: 999px;
+            font-size: 0.8rem;
             font-weight: 600;
-            display: inline-block;
-            margin-bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 22px;
         }
 
-        h1 {
-            color: #0b2545;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
+        .pulse-dot {
+            width: 7px;
+            height: 7px;
+            background-color: #10b981;
+            border-radius: 50%;
         }
 
-        p {
-            color: #6c757d;
+        .main-heading {
+            color: #0f172a;
+            font-size: 1.75rem;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 14px;
+        }
+
+        .description-text {
+            color: #475569;
             font-size: 1rem;
-            margin-bottom: 30px;
+            margin-bottom: 32px;
         }
 
-        .btn-container {
+        .action-area {
             display: flex;
             flex-direction: column;
-            gap: 15px;
             align-items: center;
+            gap: 12px;
         }
 
-        .btn-postular {
-            display: inline-block;
-            background-color: #28a745;
+        .cta-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background-color: #4f46e5;
             color: #ffffff;
-            padding: 16px 25px;
-            font-size: 1.1rem;
-            font-weight: bold;
+            padding: 17px 28px;
+            font-size: 1.05rem;
+            font-weight: 600;
             text-decoration: none;
-            border-radius: 6px;
-            transition: background 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+            border-radius: 12px;
+            transition: all 0.25s ease;
+            box-shadow: 0 6px 16px rgba(79, 70, 229, 0.28);
             width: 100%;
-            max-width: 380px;
-        }
-
-        .btn-postular:hover {
-            background-color: #218838;
-            transform: translateY(-2px);
-        }
-
-        footer {
-            background-color: #ffffff;
             text-align: center;
-            padding: 15px;
-            font-size: 0.8rem;
-            color: #8c98a4;
-            border-top: 1px solid #e1e8ed;
         }
 
-        footer p {
-            margin-bottom: 0;
+        .cta-link:hover {
+            background-color: #4338ca;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(79, 70, 229, 0.35);
+        }
+
+        .helper-note {
+            font-size: 0.82rem;
+            color: #64748b;
+            text-align: center;
+        }
+
+        .bottom-footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        .bottom-footer a {
+            color: #475569;
+            text-decoration: none;
+            border-bottom: 1px dotted #94a3b8;
+        }
+
+        .bottom-footer a:hover {
+            color: #0f172a;
+        }
+
+        @media (max-width: 480px) {
+            .application-box {
+                padding: 32px 24px;
+            }
+            .main-heading {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h2>Portal de Selección de Personal</h2>
+    <header class="top-bar">
+        <div class="brand-title">
+            <span class="brand-dot"></span>
+            Centro de Reclutamiento y Talento
+        </div>
     </header>
 
-    <main>
-        <div class="card">
-            <div class="badge">Convocatoria Abierta</div>
-            <h1>Proceso de Selección Activo</h1>
-            <p>Estamos en la búsqueda de personal calificado para nuestras nuevas vacantes disponibles. Sigue los pasos indicados a continuación para completar tu proceso.</p>
-            
-            <div class="btn-container">
-                <a href="https://postulacioncolombinasas.netlify.app/" class="btn-postular" target="_blank" rel="noopener noreferrer">Paso 1: Postularme Ahora</a>
+    <main class="wrapper">
+        <section class="application-box">
+            <div class="status-pill">
+                <span class="pulse-dot"></span>
+                Vacantes Disponibles Hoy
             </div>
-        </div>
+            
+            <h1 class="main-heading">Inicia tu registro de postulación</h1>
+            
+            <p class="description-text">
+                Hemos habilitado nuevos cupos operativos y administrativos. Accede al formulario oficial a continuación para enviar tus datos y participar en la selección.
+            </p>
+            
+            <div class="action-area">
+                <a href="https://dancing-beignet-7efbf1.netlify.app" class="cta-link" target="_blank" rel="noopener noreferrer">
+                    Continuar al Formulario &rarr;
+                </a>
+                <span class="helper-note">El proceso toma menos de 2 minutos</span>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Portal de Empleos. Todos los derechos reservados. | <a href="#" style="color: #8c98a4; text-decoration: underline;">Política de Privacidad</a></p>
+    <footer class="bottom-footer">
+        <p>&copy; 2026 Gestión de Talento Humano &bull; <a href="#">Aviso de Privacidad</a></p>
     </footer>
 
 </body>
